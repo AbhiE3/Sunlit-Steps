@@ -1,17 +1,25 @@
 import { ArrowRight, Link } from "lucide-react"
 import { Button } from "./ui/button"
 import Balancer from "react-wrap-balancer"
+import Head from "next/head"
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-b from-primary/20 to-background py-16 md:py-24">
+    <>
+    <Head>
+        <title>Helping Children Thrive | Expert Therapy Services</title>
+        <meta name="description" content="Personalized therapy services to support children's emotional, behavioral, and developmental needs." />
+        <meta property="og:title" content="Helping Children Thrive | Expert Therapy Services" />
+        <meta property="og:description" content="Specialized therapy to nurture children's growth and happiness." />
+      </Head>
+    <section className="bg-[#F4F4F4]">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                <h1 className="text-black sm:mt-10 text-4xl md:text-5xl font-bold tracking-tight mb-4">
                   <Balancer>Helping Children Grow, One Step at a Time</Balancer>
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8">
+                <p className="text-black text-xl text-muted-foreground mb-8">
                   <Balancer>
                     At Little Triumphs, we provide specialized therapy services to help children overcome challenges and
                     reach their full potential.
@@ -38,6 +46,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
+        </>
   )
 }
 

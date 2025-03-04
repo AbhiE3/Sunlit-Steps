@@ -1,16 +1,28 @@
+'use client'
+
 import { Link } from "lucide-react"
 import { Button } from "./ui/button"
+import Head from "next/head"
 
 const About = () => {
+
+  
   return (
-    <section id="about" className="py-16 bg-muted/30">
+    <>
+    <Head>
+        <title>About Our Children's Therapy Services</title>
+        <meta name="description" content="Learn about our dedicated team of therapists providing support for children's emotional and developmental growth." />
+        <meta property="og:title" content="About Our Children's Therapy Services" />
+        <meta property="og:description" content="Meet our team and learn about our mission to support children's well-being." />
+      </Head>
+    <section id="about" className="py-16 bg-amber-950">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src="About.jpeg"
                   alt="Our therapy center"
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full align-middles object-fill"
                 />
               </div>
               <div>
@@ -31,6 +43,7 @@ const About = () => {
             </div>
           </div>
         </section>
+        </>
   )
 }
 

@@ -1,8 +1,19 @@
+'use client'
+
+import Head from "next/head"
 import Link from "next/link"
 
 const Footer = () => {
+
   return (
-    <footer className="bg-muted py-8">
+    <>
+    <Head>
+        <title>Children's Therapy | Compassionate Care & Support</title>
+        <meta name="description" content="Helping children with emotional, behavioral, and developmental challenges through expert therapy services." />
+        <meta property="og:title" content="Children's Therapy | Compassionate Care & Support" />
+        <meta property="og:description" content="Providing expert therapy for children to help them thrive." />
+      </Head>
+    <footer className="bg-muted py-8 bg-[#008080]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -93,12 +104,13 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center">
-            <p className="text-sm text-muted-foreground">
+            {/* <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Little Triumphs Children's Therapy Center. All rights reserved.
-            </p>
+            </p> */}
           </div>
         </div>
       </footer>
+      </>
   )
 }
 

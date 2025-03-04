@@ -1,7 +1,7 @@
 
 const InContact = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="bg-amber-950 container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
       <div className="max-w-lg mx-auto">
         <form className="bg-white p-8 rounded-lg shadow-lg text-[#333333]">

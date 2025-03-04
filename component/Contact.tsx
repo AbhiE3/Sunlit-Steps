@@ -1,11 +1,21 @@
+'use client';
 import { Calendar, Clock, MapPin, Phone } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
+import Head from "next/head";
 
 const Contact = () => {
+
   return (
-    <section id="contact" className="py-16">
-          <div className="container mx-auto px-4">
+    <>
+    <Head>
+        <title>Contact Us | Book a Children's Therapy Session</title>
+        <meta name="description" content="Get in touch with us to schedule a consultation for your child's therapy needs." />
+        <meta property="og:title" content="Contact Us | Book a Children's Therapy Session" />
+        <meta property="og:description" content="Reach out to our team for expert therapy services and support." />
+      </Head>
+    <section  id="contact" className="bg-[#9391be] py-16">
+          <div className="container text-black mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -68,13 +78,13 @@ const Contact = () => {
                           <label htmlFor="first-name" className="text-sm font-medium">
                             First Name
                           </label>
-                          <input id="first-name" className="p-2 border rounded-md" placeholder="John" />
+                          <input id="first-name" className="p-2 border rounded-md" placeholder="John" suppressHydrationWarning />
                         </div>
                         <div className="grid gap-2">
                           <label htmlFor="last-name" className="text-sm font-medium">
                             Last Name
                           </label>
-                          <input id="last-name" className="p-2 border rounded-md" placeholder="Doe" />
+                          <input id="last-name" className="p-2 border rounded-md" placeholder="Doe" suppressHydrationWarning/>
                         </div>
                       </div>
                       <div className="grid gap-2">
@@ -86,13 +96,14 @@ const Contact = () => {
                           type="email"
                           className="p-2 border rounded-md"
                           placeholder="john.doe@example.com"
+                          suppressHydrationWarning
                         />
                       </div>
                       <div className="grid gap-2">
                         <label htmlFor="phone" className="text-sm font-medium">
                           Phone
                         </label>
-                        <input id="phone" type="tel" className="p-2 border rounded-md" placeholder="(555) 123-4567" />
+                          <input id="phone" type="tel" className="p-2 border rounded-md" placeholder="(555) 123-4567" suppressHydrationWarning/>
                       </div>
                       <div className="grid gap-2">
                         <label htmlFor="message" className="text-sm font-medium">
@@ -102,9 +113,10 @@ const Contact = () => {
                           id="message"
                           className="p-2 border rounded-md min-h-[100px]"
                           placeholder="Tell us about your child and how we can help..."
+                          suppressHydrationWarning
                         ></textarea>
                       </div>
-                      <Button type="submit" className="w-full">
+                      <Button type="submit" className="w-full" suppressHydrationWarning>
                         Send Message
                       </Button>
                     </form>
@@ -114,6 +126,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
+        </>
   )
 }
 
