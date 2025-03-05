@@ -6,6 +6,15 @@ import Head from "next/head";
 
 const Contact = () => {
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    "telephone": "+1234567890",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": ["English", "Spanish"]
+  };
+
   return (
     <>
     <Head>
@@ -13,6 +22,10 @@ const Contact = () => {
         <meta name="description" content="Get in touch with us to schedule a consultation for your child's therapy needs." />
         <meta property="og:title" content="Contact Us | Book a Children's Therapy Session" />
         <meta property="og:description" content="Reach out to our team for expert therapy services and support." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
     <section  id="contact" className="bg-[#9391be] py-16">
           <div className="container text-black mx-auto px-4">

@@ -2,6 +2,17 @@ import Head from "next/head";
 
 
 const ReviewBlock = () => {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Compassionate Children's Therapy",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120"
+    }
+  };
   return (
     <>
     <Head>
@@ -9,6 +20,11 @@ const ReviewBlock = () => {
         <meta name="description" content="Read testimonials from parents and families who have seen positive changes through our children's therapy services." />
         <meta property="og:title" content="Client Testimonials | Happy Families & Successful Therapy" />
         <meta property="og:description" content="See how our therapy services have helped children and their families." />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
     <div
       style={{

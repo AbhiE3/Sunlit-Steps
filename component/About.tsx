@@ -6,6 +6,15 @@ import Head from "next/head"
 
 const About = () => {
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Compassionate Children's Therapy",
+    "url": "https://yourwebsite.com/about",
+    "logo": "https://yourwebsite.com/logo.png",
+    "description": "Learn about our dedicated team of therapists providing support for children's emotional and developmental growth."
+  };
+
   
   return (
     <>
@@ -14,6 +23,10 @@ const About = () => {
         <meta name="description" content="Learn about our dedicated team of therapists providing support for children's emotional and developmental growth." />
         <meta property="og:title" content="About Our Children's Therapy Services" />
         <meta property="og:description" content="Meet our team and learn about our mission to support children's well-being." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
     <section id="about" className="py-16 bg-amber-950">
           <div className="container mx-auto px-4">

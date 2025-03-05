@@ -36,13 +36,6 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-        <div className="flex gap-2">
-          <Link href="/login">
-            <Button variant="outline" className="bg-primary-foreground text-primary" suppressHydrationWarning>
-              Login
-            </Button>
-          </Link>
-        </div>
       </div>
     </div>
   </header>

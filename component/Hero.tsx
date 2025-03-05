@@ -12,11 +12,11 @@ const Hero = () => {
         <meta property="og:title" content="Helping Children Thrive | Expert Therapy Services" />
         <meta property="og:description" content="Specialized therapy to nurture children's growth and happiness." />
       </Head>
-    <section className="bg-[#F4F4F4]">
+    <section className="bg-[#F4F4F4] pb-40">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h1 className="text-black sm:mt-10 text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            <div className="grid md:grid-cols-2 gap-8 items-center pt-20">
+              <div className="pb-20">
+                <h1 className="text-black sm:mt-10 text-4xl md:text-5xl font-bold tracking-tight mb-5">
                   <Balancer>Helping Children Grow, One Step at a Time</Balancer>
                 </h1>
                 <p className="text-black text-xl text-muted-foreground mb-8">
@@ -25,16 +25,15 @@ const Hero = () => {
                     reach their full potential.
                   </Balancer>
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" asChild>
-                    <Link href="#contact">
-                      Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="#services">Explore Our Services</Link>
-                  </Button>
+                <div className="flex">
+                <div className="pb-2">
+                  <button className="px-6 py-2 font-medium bg-[#008080] text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+                    Book Consultance
+                  </button>
+                </div>
+                
                 </div>
+                
               </div>
               <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
                 <img

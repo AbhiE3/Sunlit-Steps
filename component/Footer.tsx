@@ -5,6 +5,13 @@ import Link from "next/link"
 
 const Footer = () => {
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Compassionate Children's Therapy",
+    "url": "https://yourwebsite.com"
+  };
+
   return (
     <>
     <Head>
@@ -12,6 +19,10 @@ const Footer = () => {
         <meta name="description" content="Helping children with emotional, behavioral, and developmental challenges through expert therapy services." />
         <meta property="og:title" content="Children's Therapy | Compassionate Care & Support" />
         <meta property="og:description" content="Providing expert therapy for children to help them thrive." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
     <footer className="bg-muted py-8 bg-[#008080]">
         <div className="container mx-auto px-4">

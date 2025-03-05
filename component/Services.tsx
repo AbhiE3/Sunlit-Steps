@@ -48,6 +48,46 @@ const Services = () => {
     icon: string;
   } | null>(null);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Children's Therapy Services",
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": "Compassionate Children's Therapy"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Therapy Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Speech Therapy",
+            "description": "Helping children improve their speech and communication skills."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Occupational Therapy",
+            "description": "Supporting motor skills and sensory integration for children."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Behavioral Therapy",
+            "description": "Providing structured programs for emotional and behavioral support."
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <>
     <Head>
@@ -55,12 +95,16 @@ const Services = () => {
         <meta name="description" content="We offer expert therapy services, including speech therapy, occupational therapy, and behavioral support for children." />
         <meta property="og:title" content="Children's Therapy Services | Speech, Occupational, and Behavioral Therapy" />
         <meta property="og:description" content="Explore our therapy services to help children reach their full potential." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
-    <section id="services" className="py-16 bg-[#F4F4F4]">
+    <section id="services" className="pt-20 pb-25 py-16 bg-[#F4F4F4] text-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Therapy Services</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto">
             We offer a range of specialized therapy services tailored to meet the unique needs of each child.
           </p>
         </div>
@@ -69,12 +113,12 @@ const Services = () => {
           {therapies.map((therapy) => (
             <Card
               key={therapy.id}
-              className="border-2 border-primary/10 hover:border-primary/30 transition-colors cursor-pointer"
+              className="border-2 border-primary/10 hover:border-primary/30 transition-colors cursor-pointer md:h-100"
               onClick={() => setSelectedTherapy(therapy)}
             >
               <CardContent className="pt-6">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <span className="text-primary text-xl font-bold">{therapy.icon}</span>
+                  <span className="text-black text-xl font-bold">{therapy.icon}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{therapy.name}</h3>
                 <p className="text-muted-foreground">{therapy.shortDesc}</p>
@@ -86,7 +130,7 @@ const Services = () => {
 
       {selectedTherapy && (
         <Dialog open={!!selectedTherapy} onOpenChange={() => setSelectedTherapy(null)}>
-          <DialogContent>
+          <DialogContent className="text-black">
             <DialogHeader>
               <DialogTitle>{selectedTherapy.name}</DialogTitle>
             </DialogHeader>
