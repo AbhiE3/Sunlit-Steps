@@ -4,7 +4,6 @@ import Footer from "@/component/Footer";
 import Header from "@/component/Header";
 import Hero from "@/component/Hero";
 import HorizontalScroll from "@/component/Horizontal_Scroll";
-import NewTeam from "@/component/NewTeam";
 import OurTeam from "@/component/OurTeam";
 import Services from "@/component/Services";
 import Head from "next/head";
@@ -34,7 +33,7 @@ export default function Home() {
     <>
     <Head>
         <title>Compassionate Children's Therapy | Helping Kids Thrive</title>
-        <Image src="/logo.jpg" alt="Children's Therapy Logo" width={120} height={50} />
+        <Image src="logo.jpg" alt="Children's Therapy Logo" width={120} height={50} />
         <h1>Compassionate Children's Therapy</h1>
         <meta name="description" content="Expert children's therapy services focusing on emotional, behavioral, and developmental support. Book a session today!" />
         <meta name="keywords" content="children therapy, kids counseling, child mental health, autism support, speech therapy" />
@@ -50,10 +49,9 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
-      <HorizontalScroll/>
       <OurTeam />
-      <NewTeam />
       <About />
+      <HorizontalScroll/>
       <Contact />
       <Footer />
 
@@ -63,4 +61,3 @@ export default function Home() {
     </>
   )
 }
-

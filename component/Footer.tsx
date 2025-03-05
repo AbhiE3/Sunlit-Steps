@@ -1,6 +1,7 @@
 'use client'
 
 import Head from "next/head"
+import Image from "next/image";
 import Link from "next/link"
 
 const Footer = () => {
@@ -30,7 +31,13 @@ const Footer = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm font-bold">LT</span>
+                  <Image 
+                            src="/lsh.jpg" 
+                            alt="Children's Therapy Logo" 
+                            width={70} 
+                            height={70} 
+                            className="rounded-4xl"
+                          />
                 </div>
                 <h3 className="font-bold">Little Triumphs</h3>
               </div>

@@ -10,11 +10,9 @@ const HorizontalScroll: React.FC = () => {
   useEffect(() => {
     if (!scrollerRef.current) return;
 
-    // Calculate the total width of the scroller content
     const scrollerContent = scrollerRef.current;
-    const totalWidth = scrollerContent.scrollWidth / 2; // Since we duplicated the content
+    const totalWidth = scrollerContent.scrollWidth / 2;
 
-    // GSAP animation for infinite horizontal scroll
     const tl = gsap.timeline({ repeat: -1 });
 
     tl.to(scrollerContent, {
@@ -23,7 +21,6 @@ const HorizontalScroll: React.FC = () => {
       ease: "none",
     });
 
-    // Cleanup animation on component unmount
     return () => {
       tl.kill();
     };
@@ -31,27 +28,50 @@ const HorizontalScroll: React.FC = () => {
 
   return (
     <div style={{ overflow: "hidden" }}>
+    <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center mt-6">Reviews</h2>
+
       <div
         ref={scrollerRef}
         style={{
           display: "flex",
           width: "200%",
+          gap: "10px",
         }}
       >
-        {/* Duplicate content for seamless looping */}
         {[...Array(2)].map((_, i) => (
           <React.Fragment key={i}>
-            <div style={{ width: "50%", padding: "20px" }}>
-              <ReviewBlock/>
+            <div style={{ width: "50%", padding: "20px",margin: "10px", borderRadius: "10px"}}>
+              <ReviewBlock />
             </div>
-            <div style={{ width: "50%", background: "lightcoral", padding: "20px" }}>
-            <ReviewBlock/>
+            <div
+              style={{
+                width: "50%",
+                padding: "20px",
+                margin: "10px", 
+                borderRadius: "10px", 
+              }}
+            >
+              <ReviewBlock />
             </div>
-            <div style={{ width: "50%", background: "lightgreen", padding: "20px" }}>
-            <ReviewBlock/>
+            <div
+              style={{
+                width: "50%",
+                padding: "20px",
+                margin: "10px",
+                borderRadius: "10px",
+              }}
+            >
+              <ReviewBlock />
             </div>
-            <div style={{ width: "50%", background: "lightyellow", padding: "20px" }}>
-            <ReviewBlock/>
+            <div
+              style={{
+                width: "50%",
+                padding: "20px",
+                margin: "10px",
+                borderRadius: "10px",
+              }}
+            >
+              <ReviewBlock />
             </div>
           </React.Fragment>
         ))}

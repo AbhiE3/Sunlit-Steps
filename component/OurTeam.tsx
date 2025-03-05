@@ -7,25 +7,25 @@ const doctors = [
     id: 1,
     name: "Dr. Emily Carter",
     specialty: "Pediatrician",
-    image: "/images/dr-emily.jpg",
+    image: "/doct1.jpeg",
   },
   {
     id: 2,
     name: "Dr. James Anderson",
     specialty: "Psychologist",
-    image: "/images/dr-james.jpg",
+    image: "/doct2.jpg",
   },
   {
     id: 3,
     name: "Dr. Olivia Brown",
     specialty: "Therapist",
-    image: "/images/dr-olivia.jpg",
+    image: "/doct3.jpg",
   },
   {
     id: 4,
     name: "Dr. William Smith",
     specialty: "Neurologist",
-    image: "/images/dr-william.jpg",
+    image: "/doct4.jpg",
   },
 ];
 
@@ -47,7 +47,7 @@ const OurTeam = () => {
                 height={150}
                 className="w-32 h-32 mx-auto rounded-full object-cover"
               />
-              <h3 className="mt-4 text-xl font-semibold">{doctor.name}</h3>
+              <h3 className="mt-4 text-xl font-semibold text-green-700">{doctor.name}</h3>
               <p className="text-gray-600">{doctor.specialty}</p>
             </div>
           ))}

@@ -1,5 +1,5 @@
 'use client';
-import { Calendar, Clock, MapPin, Phone } from "lucide-react"
+import { Calendar, Clock, MapPin, Phone, Speech } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
 import { Button } from "./ui/button"
 import Head from "next/head";
@@ -27,7 +27,7 @@ const Contact = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-    <section  id="contact" className="bg-[#9391be] py-16">
+    <section  id="contact" className="bg-[#f0e2ca] py-16">
           <div className="container text-black mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Contact Us</h2>

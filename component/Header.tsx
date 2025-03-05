@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import Head from "next/head";
+import Image from "next/image";
 
 
 const Header = () => {
@@ -14,15 +15,21 @@ const Header = () => {
         <meta property="og:description" content="Providing therapy services to help children grow and develop in a supportive environment." />
       </Head>
     <header className="bg-[#008080] py-6">
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 ">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-primary-foreground flex items-center justify-center">
-            <span className="text-primary text-xl font-bold">LSH</span>
-          </div>
+        <div className="w-12 h-12 rounded-full bg-primary-foreground flex items-center justify-center ">
+        <Image 
+          src="/lsh.jpg" 
+          alt="Children's Therapy Logo" 
+          width={70} 
+          height={70} 
+          className="rounded-4xl"
+        />
+      </div>
           <h1 className="text-primary-foreground text-xl font-bold">LITTLE STEPS HEALING</h1>
         </div>
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6 mr-12">
           <Link href="/" className="text-primary-foreground font-medium hover:underline">
             Home
           </Link>

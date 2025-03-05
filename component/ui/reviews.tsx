@@ -1,5 +1,31 @@
 import Head from "next/head";
 
+const reviews = [
+  {
+    name: "John Doe",
+    rating: 5,
+    review:
+      "Dr. Jane Smith is an amazing doctor! She listens carefully and provides excellent advice. Highly recommended!",
+  },
+  {
+    name: "Emily Johnson",
+    rating: 4,
+    review:
+      "Great experience overall. Dr. Jane was very professional and explained everything well. Just a bit of a wait time.",
+  },
+  {
+    name: "Michael Brown",
+    rating: 5,
+    review:
+      "One of the best doctors I've visited. She was very thorough and made sure I understood my condition completely.",
+  },
+  {
+    name: "Sophia Wilson",
+    rating: 3,
+    review:
+      "Dr. Jane was knowledgeable, but I felt the consultation was a bit rushed. Would appreciate more time for questions.",
+  },
+];
 
 const ReviewBlock = () => {
 
@@ -13,6 +39,7 @@ const ReviewBlock = () => {
       "reviewCount": "120"
     }
   };
+
   return (
     <>
     <Head>
